@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    
+    <script src="{{ url_for( 'static', filename='jquery-3.1.1.js' ) }}"></script>
+    <meta charset="UTF-8">
+    <title>ChangeDetection</title>
+
+</head>
+<body style="height: 100%; margin: 0">
+
+    <div>
+        <form method="post" action="/up_image" enctype="multipart/form-data">
+        <input type="file" size="30" name="sensingbefor"/>
+        <br>
+        <input type="file" size="30" name="sensingafter"/>
+        <input type="submit" value="提交信息" class="button-new" style="margin-top:15px;"/>
+        </form>
+    </div>
+
+
+
+
+<script type="text/javascript">
+$(
+    function(){
+    var path_a = "{{data|safe}}";
+    console.log(path_a);
+    }
+)
+</script>
+
+
+</body>
+</html>
+
